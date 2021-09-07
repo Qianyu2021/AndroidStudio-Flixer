@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -40,15 +41,14 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
         movies = new ArrayList<>();
         //create the adapter
-        new MovieAdapter(this,movies);
+
+        MovieAdapter movieAdapter = new MovieAdapter(this,movies);
 
         //set the adapter on the recycler view
         rvMovies.setAdapter(movieAdapter);
 
         //SET A LAYOUT MANAGER ON THE RECYCLER view
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
-
-
 
         AsyncHttpClient client = new AsyncHttpClient();
 
