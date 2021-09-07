@@ -90,7 +90,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 public void onClick(View v) {
                     //2. navigate to a new activity on tab
                     Intent i = new Intent(context, DetailActivity.class);
-                    i.putExtra("title", movie.getTitle());
                     i.putExtra("movie", Parcels.wrap(movie));
                     context.startActivity(i);
                 }
