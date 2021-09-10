@@ -68,7 +68,6 @@ public class DetailActivity extends YouTubeBaseActivity {
             }
         });
     }
-
         private void initializeYoutube(Movie movie, final String youtubeKey) {
             youTubePlayerView.initialize(YOUTUBE_API_KEY, new YouTubePlayer.OnInitializedListener() {
 
@@ -76,9 +75,7 @@ public class DetailActivity extends YouTubeBaseActivity {
                 public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                     Log.d("DetailActivity", "onInitializationSuccess");
                     youTubePlayer.cueVideo(youtubeKey);
-
                 }
-
                 @Override
                 public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
                     Log.d(TAG, "onInitializationFailure");
